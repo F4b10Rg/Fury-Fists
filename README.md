@@ -10,6 +10,5 @@
 
 - [@F4b10Rg](https://www.github.com/F4b10Rg)
 
-
-![Logo]("Resources\furyfist_icon.jpeg")
+![furyfist_icon](https://github.com/F4b10Rg/Fury-Fists/assets/105453857/dadc370a-815a-4057-b01a-842fb3e163f6)
 
