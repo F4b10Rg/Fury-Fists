@@ -17,7 +17,7 @@ def listar_archivos_en_directorio(root_dir):
             # Puedes procesar las subcarpetas aquí
             subfolder_path = os.path.join(root, dir_name)
             frames = take_frames(subfolder_path)  # Puedes llamar a una función para procesar las imágenes
-            animations[dir_name] = Animation(dir_name,frames,.5)
+            animations[dir_name] = Animation(dir_name,frames,.7)
 
     return animations
 Animations=listar_archivos_en_directorio("Resources/ryu-animations")

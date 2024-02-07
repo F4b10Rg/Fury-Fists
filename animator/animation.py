@@ -1,6 +1,6 @@
 import pygame
 class Animation():
-    def __init__(self,name:str,list_of_frames:list,delay:float,isACicle:bool) -> None:
+    def __init__(self,name:str,list_of_frames:list,delay:float,isACicle:bool=False) -> None:
         self.name:str=name
         self.frames:list=list_of_frames
         self.actual_image:int=0
@@ -13,12 +13,14 @@ class Animation():
         if self.dt>=self.delay:
             self.actual_image+=1
             self.dt=0
-        self.actual_image = min(self.actual_image, len(self.frames) - 1)  # Limitar al máximo valor posible
+        
         if self.actual_image>=len(self.frames):
             if self.isACicle:
-                print("entro aca")
                 self.actual_image=0
             else:
-                pass    
-            
+                self.actual_image-=1    
+        self.actual_image = min(self.actual_image, len(self.frames))
         return self.frames[int(self.actual_image)]
+    def reset_animation(self):
+        self.actual_image=0
+        self.dt=0
