@@ -18,7 +18,6 @@ class Animator():
     def verify_animations(self):
         for name,animation in self.animations.items():
             if int(animation[1].actual_image)==len(animation[1].frames)-1 and not animation[1].isACicle:
-                print(int(animation[1].actual_image)==len(animation[1].frames)and not animation[1].isACicle)
                 animation[0]=False
                 animation[1].reset_animation()
             
