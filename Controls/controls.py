@@ -10,6 +10,8 @@ class Controls():
         self.S=False
         self.Z=False
         self.X=False
+        #-------special
+        self.ENTER=False
     def Update(self,event):
         if event.type==pygame.KEYDOWN:
             if event.key==pygame.K_UP:
@@ -30,6 +32,8 @@ class Controls():
                 self.Z=True
             if event.key==pygame.K_x:
                 self.X=True
+            if event.key==pygame.K_RETURN:
+                self.ENTER=True
         if event.type == pygame.KEYUP:
             if event.key==pygame.K_UP:
                 self.UP=False
@@ -49,6 +53,8 @@ class Controls():
                 self.Z=False
             if event.key==pygame.K_x:
                 self.X=False
+            if event.key==pygame.K_RETURN:
+                self.ENTER=False
     def get_controls(self)->dict:
         controls_right=[self.UP,self.DOWN,self.RIGHT,self.LEFT]
         controls_left=[self.SPACE,self.A,self.S,self.Z,self.X]
