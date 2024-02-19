@@ -1,6 +1,5 @@
 from animator.animation import Animation
 import pygame, os
-Animations={}
 def take_frames(path:str)->list:
     list_of_frames=[]
     files = os.listdir(path)
@@ -9,7 +8,7 @@ def take_frames(path:str)->list:
         relative_path_file = os.path.join(path, file)
         list_of_frames.append(pygame.image.load(relative_path_file))
     return list_of_frames
-def listar_archivos_en_directorio(root_dir):
+def get_animations(root_dir):
     animations = {}
     for root, dirs, files in os.walk(root_dir):
         
@@ -20,6 +19,4 @@ def listar_archivos_en_directorio(root_dir):
             animations[dir_name] = Animation(dir_name,frames,.7)
 
     return animations
-Animations=listar_archivos_en_directorio("Resources/ryu-animations")
-print(Animations)
 
